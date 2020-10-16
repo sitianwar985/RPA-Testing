@@ -1,0 +1,14 @@
+python --version
+pip --version
+python -m ensurepip --default-pip ##if haven't install
+python -m pip install --upgrade pip setuptools wheel ##update
+
+pip install rpa
+
+r.init(visual_automation = True, chrome_browser = False) ##	start TagUI,
+
+print(r.read('pdf_window.png'))
+print(r.read('image_preview.png')) #fetch and return text & produce
+r.hover('anchor_element.png') ##move mouse to element
+print(r.read(r.mouse_x(), r.mouse_y(), r.mouse_x() + 400, r.mouse_y() + 200))
+r.close()
